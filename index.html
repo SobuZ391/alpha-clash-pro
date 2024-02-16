@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Clash Pro</title>
+    <title>GreeNiX Typing Pro</title>
     <!-- Daisy ui and Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,9 +21,9 @@
     <!-- Home screen -->
     <section id="home-screen" class="home text-white flex flex-col justify-center items-center min-h-screen ">
         <div class="flex flex-col items-center gap-3 ">
-            <h1 class=" text-[170px] font-anton text-center ">ALPHA CLASH PRO</h1>
-        <p class=" font-medium text-xl py-4 ">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-        <button onclick="play()" class="btn btn-wide text-black" >Play</button>
+            <h1 class=" text-[170px] font-anton text-center text-gray-400 "><span class="text-orange-500" >GreeNiX</span> Typing PRO</h1>
+        <p class=" font-medium text-xl py-4 text-green-300 ">Unleash Your Keyboard Kung Fu : Press “Play Button” to Play</p>
+        <button onclick="play()" class="btn  btn-outline btn-secondary w-36 text-black " >Play</button>
         </div>
     </section>
     <!-- playground -->
@@ -80,28 +80,34 @@
             <!-- life data -->
             <div class=" flex w-1/2 justify-between ">
                 <button class="btn bg-[#894189] text-white border-none">
-                    <p class="px-3">Life  <i class="fa-solid fa-heart-circle-bolt"></i>  1
+                    <p class="px-3">Life  <i class="fa-solid fa-heart-circle-bolt"></i>
+                        <span id="current-life" >5</span>
                     </p>
                   </button>
                 <button class="btn bg-[#360490] text-white border-none ">
-                   <p class="px-2"> Score <i class="fa-solid fa-dollar-sign"></i>  1</p>
+                   <p class="px-2"> Score <i class="fa-solid fa-dollar-sign"></i> 
+                     <span id="current-score" >0</span>
+                    </p>
                   </button>
             </div>
         </div>
 
     </section>
-    <section class="score flex justify-center items-center border-2 min-h-screen hidden ">
+    <section id="final-score" class=" flex justify-center items-center border-2 min-h-screen hidden ">
         <div class="text-white text-center space-y-6 bg-[#FFFFFF33] rounded-lg p-4">
-            <h1 class="text-8xl">
-                <span>Score :</span>
-                <span>14</span>
+          
+          <h6 class="text-3xl" >Game Over</h6>
+          <h1 class="text-8xl">
+                <span >Score :</span>
+                <span id="last-score">0</span>
             </h1>
-            <button class="btn">Play Again</button>
+            <button onclick="play()" class="btn">Play Again</button>
             <p>Practice will make you Pro</p>
         </div>
     </section>
     <script src="scripts/index.js"></script>
     <script src="scripts/utility.js"></script>
+    
    
    </main>
 </body>
